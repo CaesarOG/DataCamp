@@ -5,8 +5,9 @@ dirname = sys.argv[1]
 def typesMap(dataType, val):
     if dataType == 'float':
         return float(val)
-    if dataType == 'str':
-        return val
+    if dataType == 'string':
+        val = val.replace("\"","")
+        return str(val)
     if dataType == 'int':
         return int(val)
 
